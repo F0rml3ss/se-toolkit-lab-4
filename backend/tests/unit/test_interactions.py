@@ -23,7 +23,7 @@ def test_filter_returns_interaction_with_matching_ids() -> None:
     assert len(result) == 1
     assert result[0].id == 1
 
-def test_filter_includes_interaction_at_boundary() -> None:
+def test_filter_excludes_interaction_with_different_learner_id() -> None:
     interactions = [_make_log(1, 1, 2)]
     result = filter_by_max_item_id(interactions=interactions, max_item_id=2)
     assert len(result) == 1
