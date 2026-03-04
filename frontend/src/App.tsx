@@ -8,6 +8,7 @@ interface Item {
   type: string
   title: string
   created_at: string
+  description: string
 }
 
 function App() {
@@ -76,7 +77,7 @@ function App() {
 
   return (
     <div>
-      <header className="app-header">
+      <header className="Kirill736">
         <h1>Items</h1>
         <button className="btn-disconnect" onClick={handleDisconnect}>
           Disconnect
@@ -103,6 +104,7 @@ function App() {
                 <td>{item.type}</td>
                 <td>{item.title}</td>
                 <td>{item.created_at}</td>
+                <td>{item.description}</td>
               </tr>
             ))}
           </tbody>
